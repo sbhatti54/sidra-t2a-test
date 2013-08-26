@@ -1,0 +1,110 @@
+<script type="text/javascript" src="../../src/iscroll.js"></script>
+
+<script type="text/javascript">
+var myScroll;
+
+function loaded() {
+  myScroll = new iScroll('wrapper', {
+    snap: true,
+    scrollX: false,
+    scrollY: false,
+    momentum: false,
+    hScrollbar: false,
+    onScrollEnd: function () {
+      document.querySelector('#indicator > li.active').className = '';
+      document.querySelector('#indicator > li:nth-child(' + (this.currPageX+1) + ')').className = 'active';
+    }
+   });
+}
+
+document.addEventListener('DOMContentLoaded', loaded, false);
+</script>
+
+
+
+
+<div class="spacer-10"></div>
+<div id="header">
+  <div class="row-fluid"> 
+    <a href="/home"><img class="uscc-logo hidden-phone" src="/img/uscclogo.png" width="280"></a>
+    <a href="/home"><img class="uscc-logo1 visible-phone" src="/img/uscclogo.png" width="200"></a>
+    <img class="brewers-logo hidden-phone" src="/img/iowalogo.png" width="170">
+    <img class="brewers-logo1 visible-phone" src="/img/iowalogo.png" width="100">
+  </div> 
+</div>  
+</div>  
+<div class="spacer-10"></div>
+
+<div class="container-fluid">
+  <div class="well">
+         <div class="row-fluid">
+          <div class="span6">
+            <h1 class="hidden-phone" id="title">Virtual Autograph</h1>
+            <h2 id="subtitle" class="hidden-phone">Choose your favorite image of Kenny Wallace &amp; receive a digital autograph delivered to your phone.</h2><div class="spacer-10"></div>
+            <p id="rules"class="hidden-phone">Share with your friends on Twitter or save as wallpaper.</p><div class="spacer-10"></div>
+
+            <div class="row-fluid visible-phone">
+              <div class="span12 visible-phone">
+                <h1 class="visible-phone title-mobile" id="title">Virtual Autograph</h1>
+              </div>
+            </div>
+          </div>
+              <div class="span6">
+                <h2 id="subtitle" class="visible-phone" style="padding: 0 0 0 13px;">Choose your favorite image of Kenny Wallace &amp; receive a digital autograph delivered to your phone.</h2>
+                  
+
+                  <p id="rules" class="visible-phone">Share with your friends on Twitter or save as wallpaper.</p>
+                  <p id="rules" class="visible-phone">Swipe then tap to select an image.</p>
+                  <div class="hidden-phone">
+                    <div id="kenny">
+                    <p class="kennywrapper">
+                    <a href ="/autograph/start/kenny1">
+                        <img src="https://msg-umami-t2a.s3.amazonaws.com/base_images/kennywallace_VA.jpg" width="250"/></a>
+                       </p>
+                    </div>
+                     <div id="kenny2">
+                         <a href ="/autograph/start/kenny2">
+                          <img src="https://msg-umami-t2a.s3.amazonaws.com/base_images/kennywallace_VA2.jpg" width="250"/></a>
+                 
+                  </div>
+                  </div>
+
+                  <div class="visible-phone">
+                    <div id="wrapper">
+                          <div id="scroller">
+                            <ul id="thelist">
+                              <li><a href ="/autograph/start/kenny1">
+                              <img src="https://msg-umami-t2a.s3.amazonaws.com/base_images/kennywallace_VA.jpg"/></a>
+                              </li>
+
+                              <li><a href ="/autograph/start/kenny2"><img src="https://msg-umami-t2a.s3.amazonaws.com/base_images/kennywallace_VA2.jpg"/></a></li>
+                              
+                            </ul>
+                          </div>
+                        </div>
+                        <div id="nav">
+                          <ul id="indicator">
+                            <li class="active"></li>
+                            <li></li>
+                            
+                          </ul>
+                        </div>
+                    </div>
+          
+              <div class="spacer-30"></div> 
+
+           
+          </div>
+      
+  </div>
+  </div>
+  <div align="center">
+    <div class="messages">
+      Messages and data rates may apply.  Available on select devices.
+    </div>
+
+  </div>
+
+
+		
+	

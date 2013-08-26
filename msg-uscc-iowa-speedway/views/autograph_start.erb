@@ -1,0 +1,103 @@
+<script type="text/javascript">
+function checkForm()
+{
+   var numericExpression = /^[0-9]+$/; 
+    var alphaExp = /^[a-zA-Z]+$/;
+    var phoneNumber = /^[2-9][0-8][0-9]\d+$/;
+  
+	
+	if (document.form.first_name.value.match(numericExpression) == ""|| (document.form.first_name.value == ""))
+	{
+		alert("Please enter your name.");
+		document.form.first_name.focus();
+		document.form.first_name.value = "";
+		return false;
+	}
+
+	return true;
+
+}
+</script>
+
+<div class="container-fluid">
+    <div class="row-fluid">
+      <style>
+  #header {
+    width: 100%;
+  }
+
+  img.uscc-logo {
+    float: left;
+  }
+
+  img.brewers-logo {
+    float: right;
+  }
+
+  img.brewers-logo1 {
+    float: right;
+  }
+
+
+
+</style>
+
+
+<div id="header">
+<div class="spacer-10"></div> 
+  <div class="row-fluid"> 
+    <a href="/home"><img class="uscc-logo hidden-phone" src="/img/uscclogo.png" width="280"></a>
+    <a href="/home"><img class="uscc-logo1 visible-phone" src="/img/uscclogo.png" width="200"></a>
+    <img class="brewers-logo hidden-phone" src="/img/iowalogo.png" width="170">
+    <img class="brewers-logo1 visible-phone" src="/img/iowalogo.png" width="100">
+  </div>
+<div class="hidden-phone spacer-30"></div>   
+</div>  
+
+<div class="spacer-10"></div>   
+</div>  
+
+
+<div class="container-fluid">
+  <div class="well">
+   <div class="spacer-30 hidden-phone"></div> 
+   <div class="spacer-10 visible-phone"></div> 
+    <div class="row-fluid">
+        <div class="span6">
+           <div class="spacer-20"></div>        
+            <h1 class="hidden-phone" id="title">Virtual Autograph</h1>
+            <h1 class="visible-phone" id="title">Virtual Autograph</h1>
+            <div class="spacer-10"></div>            
+            <h2 id="subtitle">Enter your name below to get your virtual autograph.</h2>
+            <%
+				err = params["err"]
+				if err =="n" %>
+				<p class="messages">Unable to write that name please try again</p>	
+			<%end
+				if err =="o" %>
+				<p class="messages">An error occurred please try again</p>	
+			<%end
+				%>
+           <div id="autograph-image" class="span6 visible-phone" style="margin-right:auto;margin-left:auto;text-align:center;">
+	
+            <img src="<%=@img_info["display_url"]%>" width="50%" />
+           </div>
+          
+		      <form method="post" name = "form" action="/autograph/sign/<%=@img_info["base_img_id"]%>" onSubmit="return checkForm();">
+                    <input type="text" class="input span12" id="first_name" name="first_name" placeholder="First Name">
+                    	<input type="hidden" name="baseImageId" value="<%=@img_info["base_img_id"]%>" />
+						<input type="hidden" name="img_desc" value="<%=@img_info["desc"]%>" />					      
+                  <button type="submit" class="btn btn-block btn-large btn-primary" onClick="_gaq.push(['_trackEvent', 'autograph', 'send_name','get']);">Get Your Signed Photo<i class="icon-chevron-right sign"></i></button>
+            
+            </div>
+            <div id="autograph-image" class="span6 visible-desktop">
+            <img class="virtual_auto" src="<%=@img_info["display_url"]%>" width="400">
+       		</div>
+          </div>
+    </div>
+    <div align="center">
+    <div class="messages">
+      Messages and data rates may apply.  Available on select devices.
+    </div>
+  </div>
+  </div>

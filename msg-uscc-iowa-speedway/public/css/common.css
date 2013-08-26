@@ -1,0 +1,576 @@
+@font-face {
+  font-family: 'SSW-USCC-Black'; src: url('/fonts/SSW-USCC-Black.eot');
+       src: url('/fonts/SSW-USCC-Black.eot?#iefix') format('embedded-opentype'),
+            url('/fonts/SSW-USCC-Black.woff') format('woff'),
+            url('/fonts/SSW-USCC-Black.ttf') format('truetype'),
+            url('/fonts/SSW-USCC-Black.svg#SSW-USCC-Black') format('svg');
+            font-weight: 900;
+            font-style: normal;
+            font-stretch: normal;
+}
+ 
+@font-face {
+  font-family: 'SSW-USCC-Medium'; src: url('/fonts/SSW-USCC-Medium.eot');
+       src: url('/fonts/SSW-USCC-Medium.eot?#iefix') format('embedded-opentype'),
+            url('/fonts/SSW-USCC-Medium.woff') format('woff'),
+            url('/fonts/SSW-USCC-Medium.ttf') format('truetype'),
+            url('/fonts/SSW-USCC-Medium.svg#SSW-USCC-Medium') format('svg');
+            font-weight: normal;
+            font-style: normal;
+            font-stretch: normal;
+}
+
+@font-face {
+  font-family: 'SSW-USCC-Light'; src: url('/fonts/SSW-USCC-Light.eot');
+       src: url('/fonts/SSW-USCC-Light.eot?#iefix') format('embedded-opentype'),
+            url('/fonts/SSW-USCC-Light.woff') format('woff'),
+            url('/fonts/SSW-USCC-Light.ttf') format('truetype'),
+            url('/fonts/SSW-USCC-Light.svg#SSW-USCC-Light') format('svg');
+            font-weight: normal;
+            font-style: normal;
+            font-stretch: normal;
+}
+
+@font-face {
+  font-family: 'SSW-USCC-Book'; src: url('/fonts/SSW-USCC-Book.eot');
+       src: url('/fonts/SSW-USCC-Book.eot?#iefix') format('embedded-opentype'),
+            url('/fonts/SSW-USCC-Book.woff') format('woff'),
+            url('/fonts/SSW-USCC-Book.ttf') format('truetype'),
+            url('/fonts/SSW-USCC-Book.svg#SSW-USCC-Book') format('svg');
+            font-weight: normal;
+            font-style: normal;
+            font-stretch: normal;
+}
+
+* {
+  text-shadow: none !important;
+}
+
+body{
+  background-color: #dfeded;
+  overflow: hidden !important;
+  padding-left: 10px !important;
+  padding-right: 10px !important;
+}
+
+select {
+    font-size: 1.5em;
+    line-height: 1.5em;
+    color: #999;  
+    border: solid 1px #ccc;
+    height: 55px;
+    border-radius: 0px;
+    background: white;
+   
+}
+
+a.arrow-left{
+  width: 200px;
+}
+
+
+#tweet {
+  margin: 0 auto;
+  text-align: center;
+}
+
+p#required{
+  color: #9f9f9f;
+  font-family: 'SSW-USCC-book';
+  margin-left: 10px;
+}
+
+h2#correct{
+      color: #0066a4;
+    font-family: 'SSW-USCC-book';
+    line-height: 1.25em;
+    font-weight: normal;
+    width: 100%;
+    font-size: 1.5em;
+}
+
+
+
+#hero-mobile {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+
+.btn {
+  font-family: 'SSW-USCC-Book';  
+  border-radius: 0px;
+  height: 60px;
+  text-align: left;
+  padding: 0 0 0 10px;
+}
+
+button.btn-gdr {
+  position: relative;
+  display: block;
+  font-size: 1.5em;
+  border-radius: 0px;
+  height: 50px;
+  padding: 2px;
+  font-family: 'SSW-USCC-book';
+  left: 30px;
+  margin-top: -70px;
+  left: 60px;
+  text-align: center;
+  width: 60% !important;
+}
+
+p#info{
+  width: 40%;
+  color: #9f9f9f;
+  font-family: 'SSW-USCC-book';
+  font-size: 1em;
+  line-height: 1.2em;
+}
+
+button.btn-gdr1 {
+  position: relative;
+  display: block;
+  font-size: 1.5em;
+  border-radius: 0px;
+  height: 50px;
+  text-align: center;
+  width: 70% !important;
+}
+
+.form-btn-wrap {
+  margin: 0 0 0 170px;
+}
+
+.logos{
+padding-left: 10px;
+padding-right: 10px;
+}
+
+.messages{
+  color: #8a8f8f;
+  font-family: 'SSW-USCC-book';
+  font-size: .8em;
+}
+
+a.btn-home {
+  font-size: 1.4em;
+  line-height: 1.1em;
+  text-shadow: 0px !important;  
+  height: 100px;
+  padding: 20px 5px 10px 15px;
+}
+
+img.virtual_auto {
+  float: right;
+  padding: 0 40px 0 0;
+}
+
+.spacer-5{
+  height: 5px;
+}
+
+.spacer-10{
+  height: 10px;
+}
+
+.spacer-20{
+  height: 20px;
+}
+
+.spacer-30{
+  height: 30px;
+}
+
+.spacer-40{
+  height: 40px;
+}
+
+
+h1#title{
+    color: #0066a4 !important;
+    font-size: 3.5em;
+    font-family: 'SSW-USCC-Black';
+    width: 100%;
+}
+
+h2#subtitle{
+    color: #0066a4;
+    font-family: 'SSW-USCC-book';
+    line-height: 1.25em;
+    font-weight: normal;
+    width: 100%;
+    font-size: 1.5em;
+}
+
+.brewers-logo{
+  float: right;
+}
+
+
+
+#kenny{
+  background-color: #dddddd;
+  padding: 10px;
+  border: 2px solid #bcbcbc;
+  width: 200px;
+  
+  
+}
+
+
+
+
+
+
+#kenny2{
+ background-color: #dddddd;
+  padding: 10px;
+  border: 2px solid #bcbcbc;
+  width: 207px;
+  margin: -319px auto 0 240px;
+}
+
+
+
+a:link, a:hover, a:active, a:visited a {
+  text-decoration: none;
+  color: white;
+}
+
+input.input, input .span4, input .span12 {
+  font-size: 1.5em;
+  line-height: 1.5em;
+  width: 94%;
+  margin: 7px 0 7px 0;
+  padding: 0 0 0 10px;
+  height: 55px;
+  -webkit-border-radius: 0px;
+}
+
+#lname{
+  width: 47%;
+}
+
+select#state-list{
+  font-size: 1.5em;
+}
+
+.well{
+    border: 10px solid #fff;
+    border-radius: 0px;
+}
+
+p#rules {
+  color: #999999;
+  font-family: 'SSW-USCC-book';
+  font-size: 1.25em;
+  line-height: 1.1em !important;
+  font-weight: normal;  
+}
+
+
+#rules{
+  padding: 10px;
+}
+
+
+/* Thumbnails homepage */
+
+i.icon-angle-right {
+  float:right;
+  padding: 2px 10px 0 0;
+}
+
+
+i.icon-angle-right.home {
+  float:right;
+  margin:  -14px 0 0 0 !important;
+  padding: 0px 5px 0 0;
+  font-size: 2em;
+}
+
+i.icon-angle-right.home1 {
+  float:right;
+  margin:  -45px 0 0 0 !important;
+  padding: 0px 5px 0 0;
+}
+
+i.icon-angle-right.home3 {
+  float:right;
+  margin:  -13px 0 0 0 !important;
+  padding: 0px 5px 0 0;
+  font-size: 2em;
+}
+
+i.icon-angle-right.home4 {
+  float:right;
+  margin:  -14px 0 0 0 !important;
+  padding: 0px 5px 0 0;
+  font-size: 2em;
+
+}
+
+i.icon-angle-right.home5 {
+  float:right;
+  margin:  -33px 0 0 0 !important;
+  padding: 0px 5px 0 0;
+  font-size: 2em;
+
+}
+
+span.bold {
+    font-family: 'SSW-USCC-Black';
+
+}
+
+.thumbnail {
+  display: inline-block;
+  background-color: white;
+  -webkit-border-radius: 0px;
+  font-family: 'SSW-USCC-Book';
+  height: auto;
+  width: 240px;
+  border: solid 5px white;
+  -webkit-box-shadow: 0 0 10px #444;
+}
+
+span#rules-tablet {
+  color: #9f9f9f;
+  font-family: 'SSW-USCC-book';
+  font-size: 1em;
+  line-height: .8em;
+  font-weight: normal;  
+}
+
+p#rules{
+  color: #bcbcbc;
+  line-height: 1em;
+  font-family: 'SSW-USCC-book';
+}
+
+
+h2#trivia{
+  font-size: 1.5em;
+  color: #0066a4;
+  width: 50%;
+  line-height: 1em;
+}
+h3#subtitle{
+font-size: 1.2em;
+color: #0066a4;
+line-height: 1.1em;
+font-family: 'SSW-USCC-book';
+font-weight: normal;
+}
+
+button.btn1{
+  position: absolute;
+  border-radius: 0px;
+  display: block;
+  font-size: 1.5em;
+  border-radius: 0px;
+  margin-left: 10px;
+  height: 50px;
+  text-align: center;
+  width: 20% !important;
+  font-family: 'SSW-USCC-book';
+}
+
+#autograph{
+  font-size: 2em;
+  line-height: 1.2em;
+  width: 100%;
+  color: #0066a4;
+  font-family: 'ssw-uscc-black';
+  margin-top: -20px;
+}
+
+.btn2{
+  border-radius: 0px;
+  display: block;
+  font-size: 1.5em;
+  border-radius: 0px;
+  margin-left: 10px !important;
+  height: 50px;
+  text-align: center;
+  width: 50% !important;
+  font-family: 'SSW-USCC-book';
+}
+
+h1#trivia{
+  font-size: 3em;
+  color: #0066a4;
+  font-family: 'SSW-USCC-Black';
+  font-weight: normal;
+  margin-top: -10px;
+}
+
+#uscc250{
+  width: 320px;
+  padding: 10px 0 10px 10px;  
+}
+
+.uscclogoreg{
+  width: 200px;
+}
+
+/* Radio Buttons */
+
+input[type="radio"] {
+    display:none;
+}
+
+input[type="radio"] + label {
+    color:#0066a4 !important;
+    font-family:'SSW-USCC-book', Arial, sans-serif;
+    font-size:1em;
+}
+
+input[type="radio"] + label span {
+    display:inline-block;
+    width:19px;
+    height:19px;
+    vertical-align:middle;
+    background:url(/img/check_radio_sheet.png) -38px top no-repeat;
+    cursor:pointer;
+}
+
+input[type="radio"]:checked + label span {
+    background:url(/img/check_radio_sheet.png) -57px top no-repeat;
+}
+
+
+
+tr a:link{
+  color: #fff;
+}
+
+tr a:hover{
+  color: #fff;
+}
+
+p.info a:link{
+  color: #0066a4;
+}
+
+p.info a:visited{
+  color: #0066a4;
+}
+label.error{display:block;}
+
+ul li{
+  -webkit-appearance: none;
+}
+
+/* scroller */
+
+
+
+#wrapper {
+  width:260px;
+  height:370px;
+  float:left;
+  position:relative;  /* On older OS versions "position" and "z-index" must be defined, */
+  z-index:1;      /* it seems that recent webkit is less picky and works anyway. */
+  overflow:hidden;
+  background:#aaa;
+  border-radius:0px;
+  background-color:#e3e3e3;
+  border: 2px solid #bcbcbc;
+  padding:10px;
+}
+
+#scroller {
+  width:600px;
+  height:430px;
+  float:left;
+  padding:0;
+}
+
+#scroller ul {
+  list-style:none;
+  display:block;
+  float:left;
+  width:100%;
+  height:100%;
+  padding:0;
+  margin:0;
+  text-align:left;
+}
+
+
+#scroller li {
+  -webkit-box-sizing:border-box;
+  -moz-box-sizing:border-box;
+  -o-box-sizing:border-box;
+  box-sizing:border-box;
+  display:block; 
+  float:left;
+  width:260px; 
+  text-align:center;
+  font-family:georgia;
+  font-size:18px;
+  line-height:140%;
+}
+
+#nav {
+  width:240px;
+  float:left;
+}
+
+#prev{
+  float:left;
+  font-weight:bold;
+  font-size:14px;
+  padding:5px 0;
+  width:80px;
+}
+
+#next {
+  float:right;
+  text-align:right;
+  font-weight:bold;
+  font-size:14px;
+  margin-top: 5px;
+}
+
+#indicator, #indicator > li {
+  display:block; float:left;
+  list-style:none;
+  padding:0; margin:0;
+}
+
+#indicator {
+  width:110px;
+  padding:12px 0 0 30px;
+  margin: 400px auto 0 -180px;
+}
+
+#indicator > li {
+  width:8px; height:8px;
+  -webkit-border-radius:4px;
+  -moz-border-radius:4px;
+  -o-border-radius:4px;
+  border-radius:4px;
+  background:#ddd;
+  overflow:hidden;
+  margin-right:4px;
+}
+
+#indicator > li.active {
+  background:#4e5152;
+}
+
+#indicator > li:last-child {
+  margin:0;
+}
+i.icon-chevron-left.prev{
+  color: #4e5152;
+  font-size: 2em;
+}
+
+i.icon-chevron-right.next{
+  color: #4e5152;
+  font-size: 2em;
+}

@@ -1,0 +1,40 @@
+
+<div class="container-fluid">
+  <div class="row-fluid">
+    <div class="span12">
+    <h1 id="select">Select Location</h1>
+
+    <div id="dropdown">
+      <select id="location" name="location">
+		<option value =""Select Location</option>        
+		<option value ="iowa_speedway">Iowa Speedway</option>
+		<option value ="merle_hay_retail">Merle Hay Retail</option>
+		<option value ="hickman_retail">Hickman Retail</option>
+		<option value ="clive_retail">Clive Retail</option>
+		<option value ="mills_civic_retail">Mills Civic Retail</option>
+		<option value ="ankeny_retail">Ankeny Retail</option>
+		<option value ="altoona_retail">Altoona Retail</option>
+		<option value ="indianola_retail">Indianola Retail</option>
+		<option value ="knoxville_retail">Knoxville Retail</option>
+		<option value ="marshalltown_retail">Marshalltown Retail</option>
+		<option value ="cellular_advantage">Cellular Advantage</option>
+		<option value ="premier_locations">Premier Locations</option>
+		<option value ="boyds_satellite">Boyd's Satellite</option>
+		<option value ="all_other_retail_locations">All other retail locations </option>
+		<option value ="uscc_hq">USCC HQ</option>
+     </select>
+    </div>
+  </div>
+  </div>
+</div>
+
+<script>
+	/* requires jquer.cookie.js*/
+	$(document).ready(function () {
+		$("#location").change(function () {
+            // Set cookie on next page...
+			// $.cookie("USCC_SPEEDWAY_LOCATION", $('#location').val(), { expires: 1 });
+			document.location = '/home?loc='+$('#location').val();
+        });
+});
+</script>

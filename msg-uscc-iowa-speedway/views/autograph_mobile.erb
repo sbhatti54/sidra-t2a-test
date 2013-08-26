@@ -1,0 +1,64 @@
+<% 
+	today = Date.today
+	if Chronic.parse(today).to_i >= Chronic.parse('2013-06-03').to_i
+		puts "before"
+%>
+
+  <meta property="og:title" content="US Cellular - Iowa Speedway" />
+  <meta property="og:type" content="company" />
+  <!--<meta property="og:image" content="" />-->
+  <meta property="og:site_name" content="US Cellular - Iowa Speedway" />
+  <meta property="fb:admins" content="1360556629" />
+  <meta property="og:description" content="Get an autographed pic from Kenny Wallace! & @USCellular at <%=@short%>. Check out mine!" />
+
+  <script>
+      window.twttr = (function (d,s,id) {
+          var t, js, fjs = d.getElementsByTagName(s)[0];
+          if (d.getElementById(id)) return; js=d.createElement(s); js.id=id;
+          js.src="//platform.twitter.com/widgets.js"; fjs.parentNode.insertBefore(js, fjs);
+          return window.twttr || (t = { _e: [], ready: function(f){ t._e.push(f) } });
+      }(document, "script", "twitter-wjs"));
+
+      function tweetIntentToAnalytics(intent_event) {
+          if (intent_event) {
+              var opt_pagePath;
+              if (intent_event.target && intent_event.target.nodeName == 'IFRAME') {
+                  opt_target = extractParamFromUri(intent_event.target.src, 'url');
+              }
+              _gaq.push(['_trackSocial', 'twitter', 'tweet', opt_pagePath]);
+          }
+      }
+      twttr.ready(function (twttr) {
+          twttr.events.bind('tweet',    tweetIntentToAnalytics);
+      });
+
+      (function(d, s, id) {
+          var js, fjs = d.getElementsByTagName(s)[0];
+          if (d.getElementById(id)) return;
+          js = d.createElement(s); js.id = id;
+          js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=109319765815639";
+          fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));
+  </script>
+</head>
+
+<div align="center">
+
+<div class="spacer-20"></div>
+
+<img src="<%= @img_url %>" width="310">
+<div class="spacer-20"></div>
+<div align="center">
+<div id="tweet">
+  <a href="https://twitter.com/share" class="twitter-share-button" data-text='Get an autographed pic from Kenny Wallace & @USCellular. Check out mine: ' data-url="<%=@short_pic %>" data-count="none" onClick="_gaq.push(['_trackSocial', 'Twitter', 'Tweet','VA']);"></a>
+</div>
+<div class="spacer-20"></div>
+</div>
+</div>
+
+
+<%
+else
+puts "after"
+end
+%>

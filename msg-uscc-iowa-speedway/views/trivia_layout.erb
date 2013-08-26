@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1" />
+<meta name="viewport" content="width=device-width" />
+<title><%=@title%> </title>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<link href="http://dqo839kq1ibvx.cloudfront.net/bootstrap_v2_1_0/css/bootstrap_no_icons.min.css" rel="stylesheet">
+<link href="http://dqo839kq1ibvx.cloudfront.net/bootstrap_v2_1_0/css/bootstrap-responsive.min.css" rel="stylesheet">
+
+<!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+<!--[if lt IE 9]>
+<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js" type="text/javascript"></script>
+<script src="/js/jquery.cookie.js" type="text/javascript"></script>
+
+<% if @js %>
+      <% @js.each do |script| %>
+          <%= "<script src='#{script}' type='text/javascript'></script>" %>
+      <% end %>
+  <% end %>
+
+<% if @css %>
+      <% @css.each do |css| %>
+       <%= "<link rel='stylesheet' href='#{css}' type='text/css' />"  %>
+	 <% end %>
+  <% end %>
+
+
+	<%
+	#no analytics for local... still waiting on tag info... 
+	@analyze_loc = request.url.downcase
+	puts "location is"
+	puts @analyze_loc
+	if @analyze_loc =~ /0.0.0.0/ or @analyze_loc =~ /localhost/	%>
+	
+	<%else%>
+		<script type="text/javascript">
+
+	  	var _gaq = _gaq || [];
+	  	_gaq.push(['_setAccount', 'UA-39561472-10']);
+	  	_gaq.push(['_setDomainName', 'hit2c.com']);
+	  	_gaq.push(['_setCustomVar',1,'Location',$.cookie('<%=@cookie%>')]);
+	  	_gaq.push(['_setSessionCookieTimeout', 120000]);
+	  	_gaq.push(['_setAllowLinker', true]);
+	  	_gaq.push(['_trackPageview']);
+
+	  	(function() {
+	    	var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+	    	ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+	   		var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	  })();
+
+	</script>
+    
+	<% end %>
+</head>
+<body>
+    <%= yield %>
+</body>
+</html>
